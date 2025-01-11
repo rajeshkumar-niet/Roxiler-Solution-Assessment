@@ -1,0 +1,108 @@
+.transactions-statistics {
+  background-image: radial-gradient(circle, rgb(117, 171, 180), rgb(101, 190, 179));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transactions-statistics:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.statistics-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-image: linear-gradient(to right, rgb(130, 192, 64), rgb(54, 96, 165));
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.statistics-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.statistics-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.statistics-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.statistics-item p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.statistics-item p:first-child {
+  font-weight: bold;
+}
+
+.statistics-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a subtle hover animation to the entire statistics section */
+@keyframes hoverPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.transactions-statistics:hover {
+  animation: hoverPulse 1s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statistics-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .statistics-title {
+    font-size: 20px;
+    text-align: center;
+  }
+}

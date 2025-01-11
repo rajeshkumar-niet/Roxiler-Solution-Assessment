@@ -1,0 +1,85 @@
+.chart-container {
+  background-image: linear-gradient(to right, rgb(142, 134, 177), rgb(154, 180, 112));
+  height: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  margin: 80px auto;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.chart-container u {
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.chart-container p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.chart-container .chart {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.chart-container .chart:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-container {
+    margin: 20px;
+    padding: 15px;
+    height: auto;
+  }
+
+  .chart-container h1 {
+    font-size: 24px;
+  }
+
+  .chart-container p {
+    font-size: 16px;
+  }
+
+  .chart-container .chart {
+    height: 250px;
+  }
+}
